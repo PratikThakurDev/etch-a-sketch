@@ -17,7 +17,7 @@ function random(number) {
 }
 
 function bgChange() {
-    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    const randomColor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
     return randomColor ;
 }
 
@@ -27,12 +27,13 @@ function editGridNumber(gridNumber) {
     for (let i = 0 ; i<gridNumber ; i++) {
         const div3 = document.createElement("div") ;
         div3.classList.add('box1') ;
+        div3.style.height = `${800/gridNumber}px`
     
 
         for (let j =0 ; j<gridNumber ; j++){
             const div4 = document.createElement("div") ;
             div4.classList.add('box') ;
-            div4.style.height = '(800/gridNumber)px'
+            div4.style.height = `${800/gridNumber}px`
             div3.append(div4) ;
         }
     
